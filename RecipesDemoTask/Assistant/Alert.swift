@@ -23,5 +23,4 @@ struct Alert {
     static func defaultAlert(on vc: UIViewController, message: String){
         createBasicAlert(on: vc, with: "", message: message)
     }
-    
 }

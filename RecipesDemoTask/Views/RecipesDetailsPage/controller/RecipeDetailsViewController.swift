@@ -83,6 +83,7 @@ class RecipeDetailsViewController: UIViewController {
         self.ingredientTableView.register(IngredientTableViewCell.Nib(), forCellReuseIdentifier: IngredientTableViewCell.identifier)
         self.ingredientTableView.delegate = self
         self.ingredientTableView.dataSource = self
+        self.ingredientTableView.rowHeight = 80
     }
 }
 

@@ -36,7 +36,9 @@ extension RecipesViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.cellForItem(at: indexPath) as! RecipesCategoryCollectionViewCell
         cell.categoryTitleLabel.textColor = AppColors.tomato
         self.healthKey = categories[indexPath.row].healthKey
-        self.getDataDetecteUserSelected(healthKey: self.healthKey)
+        self.from = 5
+        self.to = 10
+        self.handleGetData(healthKey: self.healthKey)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

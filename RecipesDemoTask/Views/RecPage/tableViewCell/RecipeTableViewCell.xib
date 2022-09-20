@@ -20,17 +20,23 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T4X-bO-s4l">
                         <rect key="frame" x="16" y="11.333333333333336" width="119" height="90.333333333333314"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-eY-P9I">
-                        <rect key="frame" x="159" y="11.333333333333332" width="220" height="53.666666666666671"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-eY-P9I">
+                        <rect key="frame" x="159" y="11.333333333333336" width="220" height="90.333333333333314"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-uO-E05">
-                                <rect key="frame" x="0.0" y="0.0" width="220" height="20.333333333333332"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-uO-E05">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="21.333333333333332"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFn-FI-jma">
-                                <rect key="frame" x="0.0" y="33.333333333333329" width="220" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="34.333333333333329" width="220" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2A-0h-Yv7">
+                                <rect key="frame" x="0.0" y="69" width="220" height="21.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,12 +50,14 @@
                     <constraint firstItem="rdx-eY-P9I" firstAttribute="leading" secondItem="T4X-bO-s4l" secondAttribute="trailing" constant="24" id="4tg-zc-aen"/>
                     <constraint firstItem="T4X-bO-s4l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GBv-b9-T1x"/>
                     <constraint firstAttribute="trailing" secondItem="rdx-eY-P9I" secondAttribute="trailing" constant="12" id="fBJ-B2-sbK"/>
+                    <constraint firstItem="rdx-eY-P9I" firstAttribute="bottom" secondItem="T4X-bO-s4l" secondAttribute="bottom" id="ndb-Nw-ZAA"/>
                     <constraint firstItem="T4X-bO-s4l" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="uPR-6a-DL8"/>
                     <constraint firstItem="T4X-bO-s4l" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.304348" id="xpV-fE-q2f"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="recipeCaloriesLabel" destination="K2A-0h-Yv7" id="PWQ-KE-gKU"/>
                 <outlet property="recipeImageView" destination="T4X-bO-s4l" id="2bI-1s-xin"/>
                 <outlet property="recipeSourceLabel" destination="OFn-FI-jma" id="kQW-0H-lBO"/>
                 <outlet property="recipeTitleLabel" destination="R4G-uO-E05" id="5He-WB-oC2"/>

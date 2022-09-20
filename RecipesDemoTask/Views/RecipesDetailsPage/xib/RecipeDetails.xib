@@ -49,7 +49,7 @@
                             </constraints>
                             <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="open on site"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Recipe Website"/>
                             <connections>
                                 <action selector="didPressedOnOpenSiteButton:" destination="-1" eventType="touchUpInside" id="LXK-nd-qt1"/>
                             </connections>

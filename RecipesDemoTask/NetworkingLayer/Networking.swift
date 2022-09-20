@@ -10,7 +10,7 @@ import Alamofire
 
 class Networking {
     
-    func getRecipes(searchWord: String, from: Int, to: Int, complition: @escaping (RecipeModel?, Error?)->Void){
+    func getRecipes(searchWord: String, from: Int, to: Int, complition: @escaping (RecipeModel?, Error?)->Void) {
         guard let url = URLs.shared.recipesURL(searchWord: searchWord, from: from, to: to) else {return}
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { res in
             switch res.result{

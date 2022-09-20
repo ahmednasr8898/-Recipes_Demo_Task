@@ -10,7 +10,7 @@ import UIKit
 
 struct MovingTo {
     
-    static func productDetails(on vc: UIViewController, recipe: Recipe){
+    static func productDetails(on vc: UIViewController, recipe: Recipe) {
         let page = RecipeDetailsViewController(nibName: NibNamed.recipeDetails, bundle: nil)
         page.recipe = recipe
         vc.navigationController?.pushViewController(page, animated: true)

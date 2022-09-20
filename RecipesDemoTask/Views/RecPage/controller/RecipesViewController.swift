@@ -11,6 +11,8 @@ class RecipesViewController: UIViewController {
     
     //MARK: - outlet
     @IBOutlet weak var recipesSearchBar: UISearchBar!
+    @IBOutlet weak var searchHistoryView: UIView!
+    @IBOutlet weak var searchHistoryTableView: UITableView!
     @IBOutlet weak var recipesTableView: UITableView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var noDataFounedImageView: UIImageView!
@@ -21,20 +23,29 @@ class RecipesViewController: UIViewController {
     var healthKey: String = ""
     var searchWord: String = "All"
     var isMore: Bool = true
-    var from: Int = 0
-    var to: Int = 5
+    var from: Int = 5
+    var to: Int = 10
+    
+    let searchHistory = ["Al", "a", "awe", "ewewe", "qwqwqw", "sasas"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCategoryData()
         setupNavigationController()
+        setCategoryData()
         setupSearchBar()
+        addTapedOnSearchBar()
         setupCategoryCollectionView()
         setRecipeData()
-        setupTableView()
+        setupRecipeTableView()
+        setupSearchHistoryTableView()
     }
     
-    func setCategoryData(){
+    private func setupNavigationController(){
+        title = "Recipes For You"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setCategoryData(){
         categories.append((category: "All", healthKey: "All"))
         categories.append((category: "Low Sugar", healthKey: "low-sugar"))
         categories.append((category: "Keto", healthKey: "keto-friendly"))
@@ -52,38 +63,5 @@ class RecipesViewController: UIViewController {
     }
 }
 
-extension RecipesViewController {
-    private func setupNavigationController(){
-        title = "Recipes For You"
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-}
 
-//MARK: - Search Bar
-extension RecipesViewController: UISearchBarDelegate {
-    func setupSearchBar(){
-        recipesSearchBar.delegate = self
-        recipesSearchBar.barTintColor = UIColor.white
-        recipesSearchBar.setBackgroundImage(UIImage.init(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
-            searchWord = "All"
-            self.getDataDetecteUserSelected(healthKey: self.healthKey)
-        }else{
-            searchWord = searchText
-        }
-        
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.searchWord = "All"
-        self.getDataDetecteUserSelected(healthKey: self.healthKey)
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        view.endEditing(true)
-        self.getDataDetecteUserSelected(healthKey: self.healthKey)
-    }
-}
 

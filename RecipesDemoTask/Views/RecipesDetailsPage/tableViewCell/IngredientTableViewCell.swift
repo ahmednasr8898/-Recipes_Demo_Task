@@ -18,6 +18,7 @@ class IngredientTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     func confiegrationCell(ingredientTitle: String){
