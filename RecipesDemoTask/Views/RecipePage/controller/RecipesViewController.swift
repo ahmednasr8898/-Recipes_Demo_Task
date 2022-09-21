@@ -52,6 +52,7 @@ class RecipesViewController: UIViewController {
     private func setupNavigationController() {
         title = "Recipes For You"
         navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     private func setupDesign() {

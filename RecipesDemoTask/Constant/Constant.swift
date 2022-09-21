@@ -10,11 +10,14 @@ import UIKit
 struct NibNamed {
     static let recipes = "Recipes"
     static let recipeDetails = "RecipeDetails"
+    static let splash = "Splash"
 }
 
 struct AppColors {
-    static let systemColor = UIColor(named: "systemColor")
-    static let tomato = UIColor(named: "tomato")
+    static let systemColor = UIColor(named: "systemColor") ?? UIColor()
+    static let tomato = UIColor(named: "tomato") ?? UIColor()
+    static let darkBlue = UIColor(named: "darkBlue") ?? UIColor()
+    static let skyBlue = UIColor(named: "skyBlue") ?? UIColor()
 }
 
 struct AppImages {

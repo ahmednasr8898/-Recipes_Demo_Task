@@ -35,7 +35,7 @@ class RecipeTableViewCell: UITableViewCell {
     
     private func setupRecipeImageView(){
         recipeImageView.layer.cornerRadius = 10
-        recipeImageView.layer.borderColor = AppColors.tomato?.cgColor
+        recipeImageView.layer.borderColor = AppColors.tomato.cgColor
         recipeImageView.layer.borderWidth = 0.2
     }
 }

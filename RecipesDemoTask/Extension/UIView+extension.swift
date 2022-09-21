@@ -37,7 +37,7 @@ extension UIView {
     func createFooterNoMoreData() -> UIView{
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 80))
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 50))
-        label.text = "لا يوجد نتائج اخري"
+        label.text = "no result more"
         label.textColor = AppColors.tomato
         label.font = UIFont(name: "Almarai-Bold", size: 14)
         label.textAlignment = .center

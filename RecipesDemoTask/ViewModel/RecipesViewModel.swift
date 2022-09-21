@@ -9,8 +9,6 @@ import Foundation
 
 class RecipesViewModel {
     
-    let networking = Networking()
-    
     var bindSuccessToView: (()->()) = {}
     var recipeData: RecipeModel!{
         didSet{
@@ -26,7 +24,7 @@ class RecipesViewModel {
     }
     
     func fetchRecipesData(searchWord: String = "All", from: Int = 0, to: Int = 5){
-        networking.getRecipes(searchWord: searchWord, from: from, to: to) { recipeModel, error in
+        Networking.shared.getRecipes(searchWord: searchWord, from: from, to: to) { recipeModel, error in
             if let recipeModel = recipeModel {
                 self.recipeData = recipeModel
             }else {
@@ -36,7 +34,7 @@ class RecipesViewModel {
     }
     
     func fetchRecipesWithFilterData(health: String, searchWord: String = "All", from: Int = 0, to: Int = 5){
-        networking.getRecipesWithFilter(searchWord: searchWord, health: health, from: from, to: to) { recipeModel, error in
+        Networking.shared.getRecipesWithFilter(searchWord: searchWord, health: health, from: from, to: to) { recipeModel, error in
             if let recipeModel = recipeModel {
                 self.recipeData = recipeModel
             }else {

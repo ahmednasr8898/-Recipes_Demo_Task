@@ -42,6 +42,8 @@
 		25B43E2D28D9315B008BA6FE /* RecipeDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B43E2B28D9315B008BA6FE /* RecipeDetails.xib */; };
 		25B43E2F28D931F6008BA6FE /* MovingTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B43E2E28D931F6008BA6FE /* MovingTo.swift */; };
 		25FD6B9F28DB4D4200C035E4 /* RecipesDemoTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD6B9E28DB4D4200C035E4 /* RecipesDemoTaskTests.swift */; };
+		25FD6BA828DB5A0800C035E4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD6BA628DB5A0800C035E4 /* SplashViewController.swift */; };
+		25FD6BA928DB5A0800C035E4 /* Splash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FD6BA728DB5A0800C035E4 /* Splash.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		25B43E2E28D931F6008BA6FE /* MovingTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingTo.swift; sourceTree = "<group>"; };
 		25FD6B9C28DB4D4200C035E4 /* RecipesDemoTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesDemoTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD6B9E28DB4D4200C035E4 /* RecipesDemoTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDemoTaskTests.swift; sourceTree = "<group>"; };
+		25FD6BA628DB5A0800C035E4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		25FD6BA728DB5A0800C035E4 /* Splash.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Splash.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		250F02A628D7C4E800F853A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				25FD6BA528DB59EB00C035E4 /* SplashPage */,
 				250F02A828D7C55F00F853A6 /* RecipePage */,
 				25B43E2928D93127008BA6FE /* RecipesDetailsPage */,
 			);
@@ -347,6 +352,15 @@
 			path = RecipesDemoTaskTests;
 			sourceTree = "<group>";
 		};
+		25FD6BA528DB59EB00C035E4 /* SplashPage */ = {
+			isa = PBXGroup;
+			children = (
+				25FD6BA628DB5A0800C035E4 /* SplashViewController.swift */,
+				25FD6BA728DB5A0800C035E4 /* Splash.xib */,
+			);
+			path = SplashPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,6 +453,7 @@
 				25AD23DA28D7C092008362F4 /* LaunchScreen.storyboard in Resources */,
 				25AD23D728D7C092008362F4 /* Assets.xcassets in Resources */,
 				25B43E0828D8FF07008BA6FE /* RecipesCategoryCollectionViewCell.xib in Resources */,
+				25FD6BA928DB5A0800C035E4 /* Splash.xib in Resources */,
 				25B43E1528D911AE008BA6FE /* RecipeTableViewCell.xib in Resources */,
 				25B43E2D28D9315B008BA6FE /* RecipeDetails.xib in Resources */,
 				250F02AE28D7C59700F853A6 /* Recipes.xib in Resources */,
@@ -479,6 +494,7 @@
 				25B43E0A28D9002D008BA6FE /* UIView+extension.swift in Sources */,
 				25B43E1828D9139C008BA6FE /* RecipeModel.swift in Sources */,
 				250F02B128D7C86B00F853A6 /* Constant.swift in Sources */,
+				25FD6BA828DB5A0800C035E4 /* SplashViewController.swift in Sources */,
 				2503B59A28DB31F0002EE3A7 /* PaddingTextField.swift in Sources */,
 				25B43E0728D8FF07008BA6FE /* RecipesCategoryCollectionViewCell.swift in Sources */,
 				25B43E0428D8FCBE008BA6FE /* +CollectionView-RecipesVC.swift in Sources */,
@@ -643,7 +659,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipesDemoTask/Utilites/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -671,7 +687,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipesDemoTask/Utilites/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

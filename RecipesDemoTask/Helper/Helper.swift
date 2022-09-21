@@ -10,15 +10,13 @@ import Foundation
 
 class Helper {
     
+    private init() { }
+   
     static let shared = Helper()
-    
-    private init() {
-        
-    }
     
     func saveLatestHistorySearch(historySearchWord: String) {
         var arr = getLatestHistorySearch()
-        if arr.count >= 10 {
+        if arr.count > 10 {
             arr.removeLast()
             arr.append(historySearchWord)
         }else{

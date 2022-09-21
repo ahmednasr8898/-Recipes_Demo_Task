@@ -48,6 +48,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
         case searchHistoryTableView:
+            tableView.checkIfNoDataFounded(countOfData: self.arrOfSearchHistory.count)
             return arrOfSearchHistory.count
             
         default :

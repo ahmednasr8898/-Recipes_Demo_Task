@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let recipes = RecipesViewController(nibName: NibNamed.recipes, bundle: nil)
-        let navigationController = UINavigationController(rootViewController: recipes)
+        let splashScreen = SplashViewController(nibName: NibNamed.splash, bundle: nil)
+        let navigationController = UINavigationController(rootViewController: splashScreen)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

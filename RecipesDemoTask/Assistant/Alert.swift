@@ -15,11 +15,11 @@ struct Alert {
         vc.present(alert, animated: true, completion: nil)
     }
     
-    static func failedToConnectWithServerAlert(on vc: UIViewController){
-        createBasicAlert(on: vc, with: "", message: "خطأ بالاتصال بالسيرفير")
+    static func failedToConnectWithServerAlert(on vc: UIViewController, title: String = ""){
+        createBasicAlert(on: vc, with: title, message: "failed to connect with server")
     }
     
-    static func defaultAlert(on vc: UIViewController, message: String){
-        createBasicAlert(on: vc, with: "", message: message)
+    static func defaultAlert(on vc: UIViewController, title: String = "", message: String){
+        createBasicAlert(on: vc, with: title, message: message)
     }
 }

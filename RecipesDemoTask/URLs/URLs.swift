@@ -10,7 +10,10 @@ import Foundation
 
 struct URLs {
     
+    private init() { }
+    
     static let shared = URLs()
+    
     private let baseURL = "https://api.edamam.com/"
 
     func recipesURL(searchWord: String, from: Int, to: Int)-> URL? {
