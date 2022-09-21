@@ -9,16 +9,15 @@ import Foundation
 
 
 struct URLs {
+    
     static let shared = URLs()
     private let baseURL = "https://api.edamam.com/"
-    private let app_id = "364ffa3d"
-    private let app_key = "cfc6a3577745554855dbc3eaa508f050"
-    
+
     func recipesURL(searchWord: String, from: Int, to: Int)-> URL? {
-        return URL(string: baseURL + "search?q=\(searchWord)&app_id=\(app_id)&app_key=\(app_key)&from=\(from)&to=\(to)")
+        return URL(string: baseURL + "search?q=\(searchWord)&app_id=\(NetworkingInfo.app_id)&app_key=\(NetworkingInfo.app_key)&from=\(from)&to=\(to)")
     }
     
     func recipesWithFilterURL(searchWord: String, health: String, from: Int, to: Int)-> URL? {
-        return URL(string: baseURL + "search?q=\(searchWord)&health=\(health)&app_id=\(app_id)&app_key=\(app_key)&from=\(from)&to=\(to)")
+        return URL(string: baseURL + "search?q=\(searchWord)&health=\(health)&app_id=\(NetworkingInfo.app_id)&app_key=\(NetworkingInfo.app_key)&from=\(from)&to=\(to)")
     }
 }

@@ -13,16 +13,16 @@ extension RecipesViewController {
         
         recipesViewModel.bindSuccessToView = {
             guard let recipes = self.recipesViewModel.recipeData, let hits = recipes.hits, !hits.isEmpty else {
-                self.showNoData()
+                self.showNoDataSearchResult()
                 return
             }
-            self.showFounedData()
+            self.showDataSearchResult()
             self.arrOfRecipes = hits
             self.reloadRecipeTableView()
         }
         
         recipesViewModel.bindFailedToView = {
-            self.showNoData()
+            self.showNoDataSearchResult()
             Alert.failedToConnectWithServerAlert(on: self)
         }
     }
@@ -34,16 +34,16 @@ extension RecipesViewController {
         
         recipesViewModel.bindSuccessToView = {
             guard let recipes = self.recipesViewModel.recipeData, let hits = recipes.hits, !hits.isEmpty else {
-                self.showNoData()
+                self.showNoDataSearchResult()
                 return
             }
-            self.showFounedData()
+            self.showDataSearchResult()
             self.arrOfRecipes = hits
             self.reloadRecipeTableView()
         }
         
         recipesViewModel.bindFailedToView = {
-            self.showNoData()
+            self.showNoDataSearchResult()
             Alert.failedToConnectWithServerAlert(on: self)
         }
     }

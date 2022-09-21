@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 struct NibNamed {
     static let recipes = "Recipes"
     static let recipeDetails = "RecipeDetails"
@@ -22,4 +21,11 @@ struct AppImages {
     static let shareImage = UIImage(named: "share")
 }
 
+struct UserDefaultsNamed {
+    static let historySearch = "historySearch"
+}
 
+struct NetworkingInfo {
+    static let app_id = "364ffa3d"
+    static let app_key = "cfc6a3577745554855dbc3eaa508f050"
+}

@@ -9,7 +9,6 @@ import UIKit
 
 
 struct MovingTo {
-    
     static func productDetails(on vc: UIViewController, recipe: Recipe) {
         let page = RecipeDetailsViewController(nibName: NibNamed.recipeDetails, bundle: nil)
         page.recipe = recipe

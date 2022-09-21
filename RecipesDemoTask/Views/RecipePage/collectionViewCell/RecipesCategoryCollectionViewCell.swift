@@ -18,10 +18,5 @@ class RecipesCategoryCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupDesignForCell()
     }
-    
-    private func setupDesignForCell(){
-    }
-    
 }

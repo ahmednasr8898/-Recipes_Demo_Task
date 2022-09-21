@@ -43,54 +43,72 @@ extension RecipesViewController {
     }
 }
 
+//MARK: - number of table view cell
 extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
         case searchHistoryTableView:
-            return searchHistory.count
+            return arrOfSearchHistory.count
+            
         default :
             return arrOfRecipes.count
         }
     }
+}
     
+//MARK: - set up cell of table view
+extension RecipesViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch tableView {
         case searchHistoryTableView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: IngredientTableViewCell.identifier, for: indexPath) as! IngredientTableViewCell
-            cell.ingredientLabel.text = searchHistory[indexPath.row]
-            return cell
+            let searchHistoryCell = tableView.dequeueReusableCell(withIdentifier: IngredientTableViewCell.identifier, for: indexPath) as! IngredientTableViewCell
+            searchHistoryCell.ingredientLabel.text = arrOfSearchHistory[indexPath.row]
+            return searchHistoryCell
+            
         default :
-            let cell = tableView.dequeueReusableCell(withIdentifier: RecipeTableViewCell.identifier, for: indexPath) as! RecipeTableViewCell
+            let recipeCell = tableView.dequeueReusableCell(withIdentifier: RecipeTableViewCell.identifier, for: indexPath) as! RecipeTableViewCell
             guard let recipe = arrOfRecipes[indexPath.row].recipe else {return UITableViewCell()}
-            cell.confiegrationCell(recipe: recipe)
-            return cell
+            recipeCell.confiegrationCell(recipe: recipe)
+            return recipeCell
         }
     }
-    
+}
+
+//MARK: - height of table view cell
+extension RecipesViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch tableView {
         case searchHistoryTableView:
             return 40
+            
         default :
             return 150
         }
     }
+}
     
-    
+//MARK: - header of table view cell
+extension RecipesViewController {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch tableView {
         case searchHistoryTableView:
             return "Latest search results"
+            
         default :
             return ""
         }
     }
-    
+}
+//MARK: - selected and deSelected item of table view
+extension RecipesViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch tableView {
         case searchHistoryTableView:
-            self.recipesSearchBar.text = self.searchHistory[indexPath.row]
+            self.recipeSearchTextField.text = self.arrOfSearchHistory[indexPath.row]
+            self.removeSearchWordButton.isHidden = false
+            
         default :
+            view.endEditing(true)
             guard let recipe = arrOfRecipes[indexPath.row].recipe else {return}
             MovingTo.productDetails(on: self, recipe: recipe)
         }

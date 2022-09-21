@@ -34,7 +34,7 @@ extension RecipesViewController {
         }
         
         recipesViewModel.bindFailedToView = {
-            self.showNoData()
+            self.showNoDataSearchResult()
             Alert.failedToConnectWithServerAlert(on: self)
         }
     }
@@ -64,7 +64,7 @@ extension RecipesViewController {
         }
         
         recipesViewModel.bindFailedToView = {
-            self.showNoData()
+            self.showNoDataSearchResult()
             Alert.failedToConnectWithServerAlert(on: self)
         }
     }
