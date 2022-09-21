@@ -68,7 +68,7 @@ extension RecipesViewController {
         let label = UILabel()
         label.text = arrOfCategories[indexPath.row].category
         label.sizeToFit()
-        return CGSize(width: label.frame.width + 24, height: 48)
+        return CGSize(width: label.frame.width + 18, height: 48)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
