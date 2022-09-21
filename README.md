@@ -1,6 +1,6 @@
 # - Recipes App Demo
 
-# this app help you to find best recipes .
+# Recipes app helps you to find the best recipes.
 
 ![Simulator Screen Shot - iPhone 12 - 2022-09-21 at 19 08 47](https://user-images.githubusercontent.com/63086808/191569434-7dd5451b-d296-4772-aef6-a07b9c756ff6.png)
 
